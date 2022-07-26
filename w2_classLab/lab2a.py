@@ -16,7 +16,7 @@ with open("C:/Users/ghard/Desktop/SE126_202240/w2_classLab/lab2a.csv") as csvfil
 
         total_records += attendees
 
-        print("{0:10}| \t{1:2}| \t{2:7.2f}| ".format(name, maxCap, attendees))
+        print("{0:20}| \t{1:2}| \t{2:2}| ".format(name, maxCap, attendees))
 
-print("TOTAL RECORDS IN FILE: {0}".format(total_records))
-print("TOTAL of ATTENDEES: {0:.2f}".format(attendees))
+print("\nTOTAL RECORDS IN FILE: {0:2}".format(total_records))
+print("TOTAL ATTENDEES: {0:2}\n".format(attendees))
