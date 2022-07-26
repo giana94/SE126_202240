@@ -3,7 +3,7 @@ from unicodedata import name
 total_records = 0 
 total_people = 0
 
-with open("C:/Users/ghard/Desktop/SE126_202240/w2_classLab/lab2a.csv") as csvfile: 
+with open("C:/Users/ghard/Desktop/SE126_202240/w2_lab2a/lab2a.csv") as csvfile: 
 
     file = csv.reader(csvfile)
 
