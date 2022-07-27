@@ -4,6 +4,7 @@ from xmlrpc.client import boolean
 
 total_records = 0 
 total_people = 0
+total_over = 0
 
 
 
@@ -31,8 +32,9 @@ with open("C:/Users/ghard/Desktop/SE126_202240/w2_lab2a/lab2a.csv") as csvfile:
         
         
         if min > max:
-            print(rec[3])
+            total_over += 1
             
-            print("{0:20}| \t{1:2}| \t{2:2}| ".format(room, max, min, over))
+            print("{0:20} | \t{1:2}  | \t{2:2} | \t{3:2}".format(room, max, min, over))
 
-print("\nTOTAL RECORDS PROCESSED: {0:2}\n\n".format(total_records))
+print("\nTOTAL RECORDS PROCESSED: {0:1}".format(total_records))
+print("TOTAL ROOMS OVER MAX CAPACITY: {0:2}\n\n".format(total_over))
