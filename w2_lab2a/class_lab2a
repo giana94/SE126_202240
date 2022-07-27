@@ -4,8 +4,7 @@ from xmlrpc.client import boolean
 
 total_records = 0 
 total_people = 0
-a = True
-b = False
+
 
 
 
