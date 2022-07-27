@@ -15,8 +15,6 @@ with open("C:/Users/ghard/Desktop/SE126_202240/w2_lab2a/lab2a.csv") as csvfile:
 
     file = csv.reader(csvfile)
     
-    
-    
 
     for rec in file:
         total_records += 1
@@ -28,7 +26,6 @@ with open("C:/Users/ghard/Desktop/SE126_202240/w2_lab2a/lab2a.csv") as csvfile:
         rec.append(rec)
         rec[3] = over
         over = int(rec[3])
-        
         
         
         if min > max:
