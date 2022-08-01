@@ -7,7 +7,7 @@ print("\nDATA FROM FILE--------------------------------------")
 print("{0:8}    {1:8}   {2}     {3}  {4}    {5}         {6}     {7}     {8}".format("TYPE", "BRAND", "CPU", "RAM", "DISK 1", "NUM DISKS", "DISK 2", "OS", "YEAR"))
 
 
-with open("C:/Users/008018155/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as csvfile:
+with open("C:/Users/ghard/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as csvfile:
 
     file = csv.reader(csvfile)
 
