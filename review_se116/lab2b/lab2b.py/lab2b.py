@@ -3,8 +3,9 @@ import csv
 records = 0
 
 #header
-print("\nDATA FROM FILE--------------------------------------")
-print("{0:8}    {1:8}   {2}     {3}  {4}    {5}         {6}     {7}     {8}".format("TYPE", "BRAND", "CPU", "RAM", "DISK 1", "NUM DISKS", "DISK 2", "OS", "YEAR"))
+print("\nDATA FROM FILE----------------------------------------------------------------------\n")
+print("{0:10} {1:9} {2:8} {3:8} {4:11} {5:13} {6:11} {7:8} {8:8}".format(" TYPE", "BRAND", "CPU", "RAM", "DISK 1", "NUM DISKS", "DISK 2", "OS", "YEAR"))
+print("---------------------------------------------------------------------------------------------")
 
 
 with open("C:/Users/ghard/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as csvfile:
@@ -23,7 +24,7 @@ with open("C:/Users/ghard/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as
         first_disk = rec[4]
         num_disks = rec[5]
 
-        #fiels below change per year
+        #fields below change per year
         second_disk = ""
         os = ""
         year = ""
@@ -47,9 +48,18 @@ with open("C:/Users/ghard/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as
             #no second disk
             os = rec[6]
             year = rec[7]
-            second_disk = "---"
+            second_disk = " ---"
+            
+        elif num_disks == "2":
+            second_disk = rec[6]
+            os = rec[7]
+            year = rec[8]
+            
+            
+
+            
 
 
-        print("{0:8}     {1:8}   {2}     {3:3}  {4:6}    \t{5:9}   \t {6:6}   {7:2} \t  {8:4}".format(type_, manu, cpu, ram, first_disk, num_disks, second_disk, os, year))
+        print("{0:12} {1:7} {2:8} {3:8} {4:14} {5:10} {6:11} {7:9} {8:5}".format(type_, manu, cpu, ram, first_disk, num_disks, second_disk, os, year))
 
-print("\n\nRECORDS:{0}".format(records))
+print("\nRECORDS:{0}\n\n".format(records))
