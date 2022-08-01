@@ -1,3 +1,22 @@
+#Giana Hardin
+#Lab 2B
+# 08/01/2022
+#Program Prompt - You have been asked to produce a report that lists all the computers in the csv file lab2b.csv. Your report should look like the following sample output.  The last line should print the number of computers in the file.
+
+#VARIABLE DICTIONARY
+#records            csv file "../se126_202240/lab2b.csv"
+#type_              column 1
+#manu               column 2
+#cpu                column 3
+#ram                column 4
+#first_disk         column 5
+#num_disks          column 6
+#second_disk        column 7
+#os                 column 8
+#year               column 9
+
+#---------MAIN PROGRAM----------------------------------------------------
+
 import csv
 
 records = 0
@@ -8,7 +27,7 @@ print("{0:10} {1:9} {2:8} {3:8} {4:11} {5:13} {6:11} {7:8} {8:8}".format(" TYPE"
 print("---------------------------------------------------------------------------------------------")
 
 
-with open("C:/Users/ghard/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as csvfile:
+with open("C:/Users/ghard/Desktop/SE126_202240/lab2b.py/lab2b.csv") as csvfile:
 
     file = csv.reader(csvfile)
 
@@ -17,7 +36,7 @@ with open("C:/Users/ghard/Desktop/SE126_202240/review_se116/lab2b/lab2b.csv") as
 
         records += 1
 
-        type_ =rec[0]
+        type_ = rec[0]
         manu = rec[1]
         cpu = rec[2]
         ram = rec[3]
