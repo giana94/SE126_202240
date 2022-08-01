@@ -81,4 +81,4 @@ with open("C:/Users/ghard/Desktop/SE126_202240/lab2b.py/lab2b.csv") as csvfile:
 
         print("{0:12} {1:7} {2:8} {3:8} {4:14} {5:10} {6:11} {7:9} {8:5}".format(type_, manu, cpu, ram, first_disk, num_disks, second_disk, os, year))
 
-print("\nRECORDS:{0}\n\n".format(records))
+print("\nNumber of computers in File:  {0}\n\n".format(records))
