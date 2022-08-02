@@ -39,27 +39,26 @@ with open("C:/Users/ghard/Desktop/SE126_202240/w3_classLab/voters_202040.csv") a
         age = int(rec[1])
         reg_vote = rec[2]
         voted = rec[3]
-
-        if age < 18:
-            notElig_reg += 1
+        
+        if age >= 18:
             
-        elif age >= 18:
-            if reg_vote == "N":
-                notReg += 1
-            elif reg_vote == "Y":
+            if reg_vote == "Y":
+                
                 if voted == "Y":
                     num_vote += 1
+                    
                 elif voted == "N":
                     didNotVote += 1
                     
-
-
-        
+            elif reg_vote == "N":
+                notReg += 1
+                
+        elif age < 18:
+            notElig_reg += 1
+                    
     
-    
-    
-    print((notElig_reg), "Not eligible to register")
-    print((notReg),"Have not registered to vote")
-    print((didNotVote), "Did not vote")
-    print((num_vote), "People voted")
-    print("\nTOTAL RECORDS PROCESSED: {0:1}\n\n".format(total_records))
+    print("\n\nNot eligible to register: {0:2}".format(notElig_reg))
+    print("  Not registered to vote: {0:2}".format(notReg))
+    print("\t    Did not vote: {0:2}".format(didNotVote))
+    print("\t    People Voted: {0:2}".format(num_vote))
+    print("\n TOTAL RECORDS PROCESSED: {0:2}\n\n".format(total_records))
