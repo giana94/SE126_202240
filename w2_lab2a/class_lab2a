@@ -1,3 +1,19 @@
+#The Python Pals
+#Lab 2A
+#08/01/2022
+#VARIABLE DICTIONARY
+#room               the name of the room to be inspected
+#max                max capacity of room
+#min                number of people attending meeting
+#over               number of attendees over max capacity
+#rec.append         adding changing to record
+#rec[3]             added column to file = over
+#total_records      total number of rooms checked
+#total_over         counter of rooms over the limit
+
+
+#------------MAIN PROGRAM------------------------------
+
 import csv
 from unicodedata import name
 from xmlrpc.client import boolean

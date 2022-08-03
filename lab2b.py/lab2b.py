@@ -27,7 +27,7 @@ print("{0:10} {1:9} {2:8} {3:8} {4:11} {5:13} {6:11} {7:8} {8:8}".format(" TYPE"
 print("---------------------------------------------------------------------------------------------")
 
 
-with open("C:/Users/008018155/Desktop/SE126_202240/review_se116/lab2b/lab2b (1).csv") as csvfile:
+with open("C:/Users/ghard/Desktop/SE126_202240/lab2b.py/lab2b.csv") as csvfile:
 
     file = csv.reader(csvfile)
 
