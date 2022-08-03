@@ -27,7 +27,7 @@ total_records = 0
 
 import csv
 
-with open("C:/Users/ghard/Desktop/SE126_202240/w3_classLab/voters_202040.csv") as csvfile:
+with open("C:/Users/008018155/Desktop/SE126_202240/w3_classLab/voters_202040.csv") as csvfile:
     
     file = csv.reader(csvfile)
     
