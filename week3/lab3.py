@@ -1,3 +1,20 @@
+#Giana Hardin
+#Lab3 (individual)
+#08/05/2022
+#SE126_202240
+
+#---------------------PROGRAM PROMP-------------------------
+#Your CIO (Chief Information Officer) has asked you to determine how much it would cost the company to replace all machines that are from 2016 and earlier. He plans on spending not more than $2,000 dollars for desktops and $1,500 for laptops.  Store the data from the file lab3a.csv into lists.  Then process the lists to reprint all of the file information (exactly as you did in Lab 2) and also produce an end report that lists the number of desktops that will be replaced, the cost to replace the desktops, the number of laptops that will be replaced, and the cost to replace the laptops.
+
+#------VARIABLE DICTIONARY----------
+# 
+# ******DONT FORGET THIS*******
+
+
+#--------MAIN PROGRAM----------------
+
+
+
 import csv
 
 records = 0
@@ -24,7 +41,7 @@ with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
         records += 1
         #print(rec)
 
-        #add data fromfile to lists - .append()
+        #add data from file to lists - .append()
         device.append(rec[0])
         brand.append(rec[1])
         cpu.append(rec[2])
@@ -36,6 +53,7 @@ with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
             second_disk.append("-none-")
             os.append(rec[6])
             yr.append(rec[7])
+
 
         else:
             second_disk.append(rec[6])
@@ -87,7 +105,6 @@ for i in range(0, records):
         print("*ERROR* encountered at index {}".format(i))
 
 print("\n\tTHERE ARE {0} 8GB RAM DEVICES / {1} 16GB RAM DEVICES".format(ram8, ram16))
-
 
 print("\n\n\tTOTAL RECORDS:", records)
 
