@@ -32,7 +32,7 @@ yr = []
 
 
 #connect to and open file ----------------------------------------
-with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
+with open ("C:/Users/ghard/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
 
     file = csv.reader(csvfile)
 
@@ -67,44 +67,35 @@ with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
 
 #process the lists to print the data to the screen 
 print("\n\tORIGINAL FILE DATA---------------------------")
-
+repl_des = 0
+repl_lap = 0
+costPerDes = 2000
+costPerLap = 1500
 
 for index in range(0, records):
 
     if device[index] == "D":
         #change to desktop
         device[index] = "Desktop"
+        if yr[index] <= "16":
+            repl_des += 1
 
     elif device[index] == "L":
-
         device[index] = "Laptop"
+        if yr[index] <= "16":
+            repl_lap += 1
 
     #change brands
 
 
     print("INDEX#{9}:\t{0:8}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}".format(device[index], brand[index], cpu[index], ram[index], first_disk[index], num_hdd[index], second_disk[index], os[index], yr[index], index))
-
-print("\t-----------------------------------------------")
-
-#prepare counting variables 
-ram8 = 0
-ram16 = 0
-#process the lists to determine the number of 8 rams and 16 rams
-for i in range(0, records):
     
-    if ram[i] == "08":
+print("-------------------------------------------------------------------------------------")
 
-        ram8 += 1
+print("\n\tTOTAL RECORDS PROCESSED:", records)
 
-    elif ram[i] == "16":
+print("\n\t\tTo replace {0} Desktops it will cost $ {1:7.2f}".format(repl_des, repl_des * costPerDes))
+print("\t\tTo replace {0}  Laptops it will cost $ {1:8.2f}\n\n".format(repl_lap, repl_lap * costPerLap))
 
-        ram16 += 1
 
-    else:
-
-        print("*ERROR* encountered at index {}".format(i))
-
-print("\n\tTHERE ARE {0} 8GB RAM DEVICES / {1} 16GB RAM DEVICES".format(ram8, ram16))
-
-print("\n\n\tTOTAL RECORDS:", records)
 
