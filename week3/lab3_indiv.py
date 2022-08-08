@@ -7,9 +7,21 @@
 #Your CIO (Chief Information Officer) has asked you to determine how much it would cost the company to replace all machines that are from 2016 and earlier. He plans on spending not more than $2,000 dollars for desktops and $1,500 for laptops.  Store the data from the file lab3a.csv into lists.  Then process the lists to reprint all of the file information (exactly as you did in Lab 2) and also produce an end report that lists the number of desktops that will be replaced, the cost to replace the desktops, the number of laptops that will be replaced, and the cost to replace the laptops.
 
 #------VARIABLE DICTIONARY----------
-# 
-# ******DONT FORGET THIS*******
 
+#device             assigned column [0]
+#brand              assigned column [1] 
+#cpu                assigned column [2]
+#ram                assigned column [3]
+#first_disk         assigned column [4]
+#num_hdd            assigned column [5]
+#second_disk        assigned column [6]
+#os                 assigned column [7]
+#os                 assigned column [8]
+#yr                 assigned column [9]
+#repl_des           counter for number of desktops to be replaced
+#repl_lap           counter for number of laptops to be replaced
+#costPerDes         cost per desktop
+#costPerLap         cost per laptop
 
 #--------MAIN PROGRAM----------------
 
@@ -32,7 +44,7 @@ yr = []
 
 
 #connect to and open file ----------------------------------------
-with open ("C:/Users/ghard/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
+with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
 
     file = csv.reader(csvfile)
 
@@ -50,7 +62,7 @@ with open ("C:/Users/ghard/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
         num_hdd.append(rec[5])
 
         if rec[5] == "1":
-            second_disk.append("-none-")
+            second_disk.append("-----")
             os.append(rec[6])
             yr.append(rec[7])
 
@@ -66,11 +78,11 @@ with open ("C:/Users/ghard/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
 #closed file ------------------------------------------------------
 
 #process the lists to print the data to the screen 
-print("\n\tORIGINAL FILE DATA---------------------------")
+print("\n\t----------------------ORIGINAL FILE DATA---------------------------")
 repl_des = 0
 repl_lap = 0
-costPerDes = 2000
-costPerLap = 1500
+costPerDes = int(2000)
+costPerLap = int(1500)
 
 for index in range(0, records):
 
@@ -88,7 +100,7 @@ for index in range(0, records):
     #change brands
 
 
-    print("INDEX#{9}:\t{0:8}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}".format(device[index], brand[index], cpu[index], ram[index], first_disk[index], num_hdd[index], second_disk[index], os[index], yr[index], index))
+    print("#{9}:\t{0:8}\t{1}\t{2}\t{3}\t{4}\t {5}\t{6}\t {7}\t {8}".format(device[index], brand[index], cpu[index], ram[index], first_disk[index], num_hdd[index], second_disk[index], os[index], yr[index], index))
     
 print("-------------------------------------------------------------------------------------")
 
