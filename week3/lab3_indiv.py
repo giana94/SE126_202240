@@ -44,7 +44,7 @@ yr = []
 
 
 #connect to and open file ----------------------------------------
-with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
+with open ("C:/Users/ghard/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
 
     file = csv.reader(csvfile)
 
@@ -78,11 +78,14 @@ with open ("C:/Users/008018155/Desktop/SE126_202240/week3/lab3a.csv")as csvfile:
 #closed file ------------------------------------------------------
 
 #process the lists to print the data to the screen 
-print("\n\t----------------------ORIGINAL FILE DATA---------------------------")
+print("\n\t----------------------ORIGINAL FILE DATA---------------------------\n\n")
 repl_des = 0
 repl_lap = 0
 costPerDes = int(2000)
 costPerLap = int(1500)
+
+print("{9:9}{0:10} {1:9} {2:8} {3:8} {4:11} {5:13} {6:11} {7:8} {8:8}".format(" TYPE", "BRAND", "CPU", "RAM", "DISK 1", "NUM DISKS", "DISK 2", "OS", "YEAR", "INDEX"))
+print("-------------------------------------------------------------------------------------------------------")
 
 for index in range(0, records):
 
@@ -100,7 +103,7 @@ for index in range(0, records):
     #change brands
 
 
-    print("#{9}:\t{0:8}\t{1}\t{2}\t{3}\t{4}\t {5}\t{6}\t {7}\t {8}".format(device[index], brand[index], cpu[index], ram[index], first_disk[index], num_hdd[index], second_disk[index], os[index], yr[index], index))
+    print("{9}\t {0:12} {1:7} {2:8} {3:8} {4:14} {5:10} {6:11} {7:9} {8:5}".format(device[index], brand[index], cpu[index], ram[index], first_disk[index], num_hdd[index], second_disk[index], os[index], yr[index],index))
     
 print("-------------------------------------------------------------------------------------")
 
