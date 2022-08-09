@@ -100,7 +100,7 @@ for index in range(0,records):
         houseStark += 1
         
     if houseAllegiance[index] == "House Baratheon":
-        motto = "Ours is the fury"
+        motto = "Ours is the fury."
         houseMotto.append(motto)
         houseBaratheon += 1
     
