@@ -43,7 +43,7 @@ gradeAvg = []
 let_avg = []
 
 
-with open("C:/Users/ghard/Desktop/SE126_202240/week4/listPractice1.txt") as csvfile:
+with open("C:/Users/008018155/Desktop/SE126_202240/week4/listPractice1.txt") as csvfile:
     
     file = csv.reader(csvfile)
     

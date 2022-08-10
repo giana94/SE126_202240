@@ -61,7 +61,7 @@ houseMotto = []
 
 #open csv file to read
 
-with open("C:/Users/ghard/Desktop/SE126_202240/week4/lab4A_GOT_NEW.txt") as csvfile:
+with open("C:/Users/008018155/Desktop/SE126_202240/week4/lab4A_GOT_NEW.txt") as csvfile:
 
     file = csv.reader(csvfile)
 
@@ -138,7 +138,7 @@ avg_age /= records
 
 
 print("\n\nNUMBER OF PEOPLE LISTED:",records)
-print("AVERAGE AGE: {:.1f}\n".format(avg_age))
+print("AVERAGE AGE: {:.0f}\n".format(avg_age))
 
 print("\n\nNUMBER OF PEOPLE IN EACH HOUSE:\n")
 print("     House Stark:", houseStark)
