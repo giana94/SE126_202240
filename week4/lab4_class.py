@@ -121,4 +121,4 @@ classAvg = classAvg / records
 
 
 print("\n\n\t\tTOTAL STUDENTS PROCESSED:", records)
-print("\t\t\t   CLASS AVERAGE:",classAvg,"\n\n")
+print("\t\t\t   CLASS AVERAGE: {:.2f}".format(classAvg),"\n\n")
