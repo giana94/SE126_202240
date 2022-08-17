@@ -7,7 +7,7 @@
 7,Britney Spears,Baby One More Time,3:30,93.0,1999
 8,TLC,Waterfalls,4:39,85.9,1995
 9,R.E.M.,Losing My Religion,4:27,125.4,1991
-10,Sinead O'Connor,Nothing Compares 2 U,5:08,120.0,1990
+10,Sinead OConnor,Nothing Compares 2 U,5.08,120.0,1990
 11,Pearl Jam,Jeremy,5:19,106.2,1992
 12,Alanis Morissette,You Oughta Know,4:09,105.0,2005
 13,Dr. Dre,Nuthin' but a 'G' Thang,4:00,94.7,1993
@@ -34,13 +34,13 @@
 34,Third Eye Blind,Semi-Charmed Life,3:39,102.0,1997
 35,Oasis,Wonderwall,4:20,87.1,1995
 36,C + C Music Factory,Gonna Make You Sweat,4:04,114.6,1990
-37,Green Day,Time of Your Life (Good Riddance),2:27,95.0,1997
+37,Green Day,Time of Your Life,2:27,95.0,1997
 38,Christina Aguilera,Genie in a Bottle,3:36,87.9,1999
 39,Goo Goo Dolls,Iris,3:37,157.4,1999
 40,Color Me Badd,I Wanna Sex U Up,4:06,101.0,1991
 41,Spin Doctors,Two Princes,4:16,103.9,1993
 42,Collective Soul,Shine,5:06,150.1,1994
-43,En Vogue,My Lovin' (You're Never Gonna Get It),4:44,98.0,1992
+43,En Vogue,My Lovin',4:44,98.0,1992
 44,Fugees,Killing Me Softly,4:26,92.4,1996
 45,Hootie & The Blowfish,Only Wanna Be With You,3:46,103.5,1995
 46,Shania Twain,You're Still the One,3:15,134.1,2004
@@ -55,13 +55,13 @@
 55,Fiona Apple,Criminal,4:43,89.9,1998
 56,LL Cool J,Mama Said Knock You Out,4:50,102.4,1991
 57,Jay-Z,Can I Get a -,4:42,88.5,1999
-58,Sophie B. Hawkins,Damn, I Wish I Was Your Lover,5:12,95.1,1992
+58,Sophie B. Hawkins,Damn I Wish I Was Your Lover,5:12,95.1,1992
 59,Weezer,Buddy Holly,2:40,121.2,1994
 60,Bell Biv Devoe,Poison,4:24,111.8,1990
 61,Sheryl Crow,All I Wanna Do,4:32,120.1,1994
-62,Live	I Alone,3:50,89.9,1995
-63,Notorious B.I.G. Featuring Puff Daddy & Mase,Mo Money Mo Problems,4:10,104.4,1997
-64,The Presidents of the United States of America,Peaches,2:48,119.9,1996
+62,Live,I Alone,3:50,89.9,1995
+63,Notorious B.I.G. (FT),Mo Money Mo Problems,4:10,104.4,1997
+64,TPUSA,Peaches,2:48,119.9,1996
 65,Digital Underground,The Humpty Dance,6:26,103.5,1990
 66,Edwin McCain,I'll Be,3:54,95.3,1997
 67,Deee-Lite,Groove Is in the Heart,3:52,121.5,1990
@@ -93,7 +93,7 @@
 93,Lisa Loeb & Nine Stories,Stay,3:00,160.8,1994
 94,Fastball,The Way,4:17,120.8,1998
 95,Montell Jordan,This Is How We Do It,3:57,103.6,1995
-96,Nelson,(Can't Live Without Your) Love And Affection,3:56,121.3,1997
+96,Nelson,Love And Affection,3:56,121.3,1997
 97,Prince,Gett Off,4:29,99.9,1991
 98,EMF,Unbelievable,3:29,104.1,1991
 99,Missy Elliott,The Rain (Supa Dupa Fly),3:59,160.0,1997

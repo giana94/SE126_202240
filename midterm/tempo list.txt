@@ -1,0 +1,9 @@
+TEMPO | BPM
+Prestissimo - very very fast (>200bpm)
+Presto - Very fast (168-200bpm)
+Allegro - Fast (120-168bpm)
+Moderato - Moderately (108-120bpm)
+Andante - Walking Pace (76-108bpm)
+Adagio - Slow and Stately (66-76bpm)
+Lento/Largo - Very Slow (40-60bpm)
+Grave - Slow and Solemn (20-40bpm)
