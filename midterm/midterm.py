@@ -1,5 +1,29 @@
 import csv
 
+def menu():
+    
+    print("1. 1990")
+    print("2. 1991")
+    print("3. 1992")
+    print("4. 1993")
+    print("5. 1994")
+    print("6. 1995")
+    print("7. 1996")
+    print("8. 1997")
+    print("9. 1998")
+    print("10. 1999")
+    print("11. ALL YEARS")
+    
+    choice = int(input("Please select a year you would like to view hit songs: "))
+    
+    while choice < 0 or choice > 11:
+        
+        print("**INVALID OPTION! TRY AGAIN**")
+        choice = int(input("Please select a year you would like to view hit songs: "))
+        
+    return choice
+
+
 records = 0
 prestissimo = 0
 presto = 0
@@ -19,7 +43,6 @@ duration = []
 bpm = []
 year = []
 tempo = []
-
 
 
 #open csv file to read
@@ -103,23 +126,48 @@ for index in range(0,records):
     
     
     
+print("\n\n\tNUMBER OF Songs:",records)
+print("\nSongs played in Prestissimo: {}".format(prestissimo))
+print("     Songs played in Presto: {}".format(presto))
+print("    Songs played in Allegro: {}".format(allegro))
+print("   Songs played in Moderato: {}".format(moderato))
+print("    Songs played in Andante: {}".format(andante))
+print("     Songs played in Adagio: {}".format(adagio))
+print("      Songs played in Lento: {}".format(lento))
+print("      Songs played in Grave: {}".format(grave))
+
+print("\n")
+
+menu_choice = menu()
+
+while menu_choice != 12:
     
+    if menu_choice == 1:
+        print("\n\tSONGS AND TEMPO FROM 1990")
+        print("{0:3.0f}\t {1:30} {2:30} \t{3:10} {4:5.1f} \t{5:7}  {6:12}".format(rank[index], artist[index], song[index], duration[index], bpm[index], year[index], tempo[index]))
+        
     
+        #for i in range(0, records):
+            
+
+'''       
+    if menu_choice == 2:
+        
+        print("\n\tLETTER AVERAGE")
+        
+        for i in range(0, records):
     
+            print("{0:15}\t{1:15}\t{2:3}".format(firstname[i], lastname[i], letter_avg[i]))
+        
+    if menu_choice == 3:
+        
+        print("\n\tORIGINAL FILE DATA")
+        
+        for i in range(0, records):
     
-    
-    
-    
-    
-    
-    
-    
-print("\n\nNUMBER OF Songs:",records)
-print("Songs played in Prestissimo: {}".format(prestissimo))
-print("Songs played in Presto: {}".format(presto))
-print("Songs played in Allegro: {}".format(allegro))
-print("Songs played in Moderato: {}".format(moderato))
-print("Songs played in Andante: {}".format(andante))
-print("Songs played in Adagio: {}".format(adagio))
-print("Songs played in Lento: {}".format(lento))
-print("Songs played in Grave: {}".format(grave))
+            print("{0:15}\t{1:15}\t{2:3}\t{3:3}\t{4:3}\t{5:3}".format(firstname[i], lastname[i], test1[i], test2[i], test3[i], teacher[i]))
+        
+        
+    menu_choice = menu()
+'''
+print("\n\n\n\n\n\tThank you & Goodbye!")
