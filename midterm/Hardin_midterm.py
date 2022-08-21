@@ -47,7 +47,7 @@ def menu():
         
     return choice
 
-
+#variables used as counters
 records = 0
 prestissimo = 0
 presto = 0
@@ -86,13 +86,13 @@ with open("C:/Users/ghard/Desktop/SE126_202240/midterm/90s_songs.txt") as csvfil
         bpm.append(float(rec[4]))
         year.append(rec[5])
 
-#first print out of original list data
+#Menu choice for viewing list data
 
 print("\n\t\t\t\tWelcome to Top hits of 1990-2000!! What would you like to view?\n")
 menu_choice = menu()
 
 while menu_choice != 3: 
-
+    #first choice = original data
     if menu_choice == 1:
         print("\n\n----------------------------------------ORIGINAL DATA-------------------------------------------------------")
         #formatting headers for sections        
@@ -104,13 +104,14 @@ while menu_choice != 3:
             print("{0:3.0f}\t {1:30} {2:30} \t{3:10} {4:5.1f}\t{5:5}".format(rank[index], artist[index], song[index], duration[index], bpm[index], year[index]))
         print("\n\tNUMBER OF Songs:",records)
 
-
+    #second choice is for added song tempos
     if menu_choice == 2:
         print("\n\n---------------------------------------------TEMPOS-----------------------------------------------------------------")
         print("{0:10} {1:35} {2:22} {3:13} {4:5} \t{5:9} {6:15}".format("RANK","ARTIST","SONG","DURATION","BPM","YEAR","TEMPO"))
         print("-------------------------------------------------------------------------------------------------------------------")
         for index in range(0, records):   
             
+            #appended the tempo list and added counter to each class
             if bpm[index] > 200:
                 tempo_class = "Prestissimo"
                 tempo.append(tempo_class)
@@ -154,6 +155,7 @@ while menu_choice != 3:
             print("{0:3.0f}\t {1:30} {2:30} \t{3:10} {4:5.1f} \t{5:7}  {6:12}".format(rank[index], artist[index], song[index], duration[index], bpm[index], year[index], tempo[index]))
 
         print("\n")
+        #print if ONLY the value of tempo class is greater than 0
         if prestissimo > 0:
             print("Songs played in Prestissimo: {}".format(prestissimo))
         if presto > 0:
