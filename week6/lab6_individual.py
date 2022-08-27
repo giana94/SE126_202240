@@ -78,7 +78,6 @@ while answer == "y":
             cAge = datetime.today().year - date_object.year - ((datetime.today().month, datetime.today().day) < (date_object.month, date_object.day))
             print("\n\t\tCurrent Age: ",cAge)
 
-
     else:
         print("\n\t\tYour search for {} was NOT FOUND.".format(search))
 
