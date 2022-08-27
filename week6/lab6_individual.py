@@ -29,7 +29,7 @@ fName = []
 bday = []
 
 
-with open("C:/Users/ghard/Desktop/SE126_202240/w6_classLab/lab5_updated.txt") as csvfile:
+with open("C:/Users/ghard/Desktop/SE126_202240/week6/lab6_updated.txt") as csvfile:
     
     file = csv.reader(csvfile)
 
