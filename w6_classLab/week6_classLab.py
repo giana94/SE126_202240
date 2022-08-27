@@ -1,29 +1,15 @@
-# The Python Pals
-#SE126_202240
-#08/23/22
-#Class Lab 6
+#Class Lab Week 5
+#Python Pals
 
-#----VARIABLE DICTIONARY--------
+#Program Prompt: Python program that reads the data from the file and stores all data into appropriate lists. The program should then prompt the user for the person’s last name they are searching for and display all available information on that person if they are found.  You must use the sequential search.  The program should allow the user to search for as many people as they want. The program should also print a statement telling the user how many iterations of the search loop the program went through before finding (or not finding) the requested person.
 
+#Variable Dictionary:
 
-
-
-##------------*******HEY!!!! DONT FORGET ABOUT ME!!!!!******-------------------------
-
-
-
-
-
-#-----PROGRAM PROMPT--------------
-#Write a Python program that reads the data from the file and stores all data into appropriate lists. The program should then prompt the user for the person’s last name they are searching for and display all available information on that person if they are found.  You must use the sequential search.  The program should allow the user to search for as many people as they want. The program should also print a statement telling the user how many iterations of the search loop the program went through before finding (or not finding) the requested person.
-
-#----------------------------------------------------------------------------------------
-
+#MAIN CODE---------------------------------------------------------------------------------------------------------------
 
 import csv
 
 records = 0
-search_count = 0
 
 lName = []
 fName = []
@@ -34,50 +20,57 @@ with open("C:/Users/ghard/Desktop/SE126_202240/w6_classLab/lab5_updated.txt") as
     file = csv.reader(csvfile)
 
     for rec in file:
+
         records += 1
-        
+
         lName.append(rec[0])
         fName.append(rec[1])
         bday.append(rec[2])
-print("\n\n---------------------------------------------------")
-print("{0:12}\t {1:15}  {2:7}".format("Last Name", "First Name", "Date of Birth"))
-print("---------------------------------------------------")
+
+#print("Finished processing file. There are {} records.".format(records))
+
+print("\n\n-----------------------------------------------------------------")
+print("{0:12} \t {1:12}\t {2:15}  {3:7}".format("Index", "Last Name", "First Name", "Date of Birth"))
+print("-----------------------------------------------------------------")
 
 for i in range(0,records):
-    print("{0:12}\t  {1:12} \t   {2:7}".format(lName[i], fName[i], bday[i]))
-    
-    
+    print("Index: {0:2} \t {1:12}\t  {2:12} \t   {3:7}".format(i, lName[i].title(), fName[i].title(), bday[i]))
+
+print("\n")
+
 answer = "y"
+
 while answer == "y":
-    
-    search = input("\n\nEnter the FULL LAST NAME of the record you are looking for: ")
-    found = -1 
-    
+
+    search_count = 0
+
+    search = input("\nEnter the full LAST NAME of the person you want to search for: ").title()
+    found = []
+
     for i in range(0, records):
+
         search_count += 1
+
         if search == lName[i]:
-            found = i
-            print("We have FOUND ", search, " at INDEX: ", i)
-            print("\t{1:12}\t  {2:12} \t   {3:7}".format(i, lName[i], fName[i], bday[i]))
-            
-    if found > 0:
-        if search == lName[i]:
-            found = i
-            print("\t{1:12}\t  {2:12} \t   {3:7}".format(i, lName[i], fName[i], bday[i]))
-        
+
+            found.append(i)
+
+    print("\n\n\t\tSEQUENTIAL SEARCH COMPLETE.")
+    print("-----------------------------------------------------------------")
+    
+    if len(found) > 0:
+        for i in range(0, len(found)):
+            #print("\nWe have FOUND ", search, " at INDEX: {}".format(found))
+            print("INDEX: {0} \t {1:10} \t {2:10} \t {3:10}".format(found[i], lName[found[i]], fName[found[i]], bday[found[i]]))
+
     else:
-        print("Your search for ", search, " has NOT BEEN FOUND.")
-        print("Please check Your spelling and try again!")
-    print("\n\nLOOPS PERFORMED FOR THIS SEARCH: ", search_count)
-    
-    
-    search_count = 0 #resets the counter for the next search
-    answer = input("\n\n Would you like to search again? [y/n]: ")
-    
-    answer = answer.lower() #finds lowercase equivalent of object before '.'
+        print("\n\t\tYour search for {} was NOT FOUND.".format(search))
+
+    print("\n\nSearch Loop Iterations Performed: {}".format(search_count))
+
+    answer = input("\n\n Would you like to search again? [y/n]: ").lower()
+
     while answer != "y" and answer != "n":
         print("**INVALID ENTRY**")
-        answer = input("\n\n Would you like to search again? [y/n]: ")
-    
-        answer = answer.lower() #finds lowercase equivalent of object before '.'
-print("\n\n\nThank you for using our program! Bye!\n\n")
+        answer = input("\n\n Would you like to search again? [y/n]: ").lower()
+print("\n\n\n\t\t\tThank you, Byeeeeee!\n\n")
