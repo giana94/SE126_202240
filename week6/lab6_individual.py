@@ -74,8 +74,8 @@ while answer == "y":
 
         for i in range(0, len(found)):
             print("INDEX: {0} \t {1:10} \t {2:10} \t {3:10}".format(found[i], lName[found[i]], fName[found[i]], bday[found[i]]))
-            date_object = datetime.strptime(bday[found[i]], '%m/%d/%Y').date() 
-            cAge = datetime.today().year - date_object.year - ((datetime.today().month, datetime.today().day) < (date_object.month, date_object.day))
+            date_object = datetime.strptime(bday[found[i]], '%m/%d/%Y').date() #this converts the 'bday' string into datetime formatting '%m/%d%y. 
+            cAge = datetime.today().year - date_object.year - ((datetime.today().month, datetime.today().day) < (date_object.month, date_object.day)) #formual to calculate current age using imported todays date subtracted by the date of birth of searched record. " .today().year/month/day "
             print("\n\t\tCurrent Age: ",cAge)
 
     else:
