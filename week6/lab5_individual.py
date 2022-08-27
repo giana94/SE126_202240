@@ -1,6 +1,6 @@
 # Giana Hardin
 # SE126_202240
-# Lab6 individual
+# Lab5 individual
 # 8/26/22
 
 #Program Prompt:
