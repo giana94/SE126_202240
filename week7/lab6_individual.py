@@ -67,17 +67,18 @@ while answer == "y":
         guess = int((min + max) / 2)
 
     if search == lName[guess]: 
-        print("\n\nLast name {} was Found at index: {}".format(search.upper(), guess))
+        print("\n\nLast name {} was Found at index: {}".format(search.upper(), (guess + 1)))
         print("\n\t {1:12}\t  {2:12} \t   {3:7}".format(guess, lName[guess].title(), fName[guess].title(), dob[guess]))
 
     else:
         print("\n\nYour search for ", search.upper(), " Has Not been Found. \n Check your spelling and try again!")
-        
+
     print("\nBINARY SEARCH LOOPS PERFORMED: {} ".format(binary_loop))
     answer = input("\n\n\tWould you like to search another Record? [y/n]: ").lower()
     while answer != "n" and answer != "y":
         print("\t\t **ERROR** Sorry Invalid Entry")
         answer = input("\nWould you like to search another Record? [y/n]: ").lower()
+
 
 print("\n\n\t\t\tHave a great day!!! :) \n\n\n")
 
