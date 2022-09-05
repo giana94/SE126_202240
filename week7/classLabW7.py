@@ -10,6 +10,15 @@
 #You must use a function that asks the user in they want to continue or stop. The function should only accept an uppercase or lowercase y or n
 
 #---------------Variable Dictionary---------------
+#seatA - D              list index for seats
+#seat                   seatPick() function allows user to select Row and Seat letter
+#seatTaken              True or False - will not allow seat option to be picked if already X and True
+#answer                 = "y" to stay in program
+
+
+
+
+
 
 #Functions:
 def seatPick():
@@ -48,7 +57,7 @@ answer = "y"
 while answer == "y":
     seatTaken = "False"
     seat = seatPick()
-    os.system('cls')
+    os.system('cls')   #system clear
 
     if seatA[seat[0]] == 'X':
             if seat[1] == 'A':
@@ -88,5 +97,4 @@ while answer == "y":
 
     answer = again()
 
-
-print("\n\n\t\t\tGoodbyeeeeee!")
+print("\n\n\t\t\tThank you for using our program! Goodbyeeeeee!")
