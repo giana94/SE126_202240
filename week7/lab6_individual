@@ -54,7 +54,6 @@ while answer == "y":
 
     search = input("\n\nEnter the LAST NAME of the record you are looking for: ").lower()
 
-    
     while (min < max and search != lName[guess]):  # Less than < used for lists in Ascending order! This loop splits record in half everytime until search is found
 
         binary_loop += 1
@@ -73,9 +72,12 @@ while answer == "y":
 
     else:
         print("\n\nYour search for ", search.upper(), " Has Not been Found. \n Check your spelling and try again!")
-
+        
     print("\nBINARY SEARCH LOOPS PERFORMED: {} ".format(binary_loop))
     answer = input("\n\n\tWould you like to search another Record? [y/n]: ").lower()
+    while answer != "n" and answer != "y":
+        print("\t\t **ERROR** Sorry Invalid Entry")
+        answer = input("\nWould you like to search another Record? [y/n]: ").lower()
 
 print("\n\n\t\t\tHave a great day!!! :) \n\n\n")
 
