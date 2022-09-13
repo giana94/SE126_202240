@@ -10,7 +10,25 @@
 
 
 #-----------VARIABLE DICTIONARY-----------
+#choice         menu() choice input
+#answer         is equal to "y" to stay in loop
+#idCode         index[0] from csv file
+#lName          index[1] from csv file
+#fName          index[2] from csv file
+#age            index[3] from csv file
+#allegience     index[4] from csv file
+#search         under each menu choice, user input 
+#search_count   used for sequential search
+#bubble()       bubble sort by first name  in ascending order
+#bubble2()      bubble sort by ID code in ascending order
+#again()        y or n to restart search
+#bye()          end program function
 
+
+
+
+
+#-----------FUNCTIONS-----------
 def menu():
     print("\n\n\tSEARCH MENU\n")
     print("1.	Search by FIRST NAME")
@@ -33,9 +51,10 @@ def again():
     while answer != "n" and answer != "y":
         print("\t\t **ERROR** Invalid Entry")
         answer = input("\n\n\tWould you like to search again? [y/n]: ").lower()
+    os.system('cls')
     return answer
 
-def bubble():
+def bubble(): #first name ascending order
     #BUBBLE SORT - REQUIRED for BINARY SEARCH! MUST HAPPEN FIRST 
         for i in range(0, records - 1):#outter loop
             #print("OUTER LOOP! i = ", i)
@@ -67,8 +86,8 @@ def bubble():
                     temp = allegience[index]
                     allegience[index] = allegience[index + 1]
                     allegience[index + 1] = temp
-                    
-def bubble2():
+
+def bubble2(): #ID code ascending order
         for i in range(0, records - 1):#outter loop
             for index in range(0, records - 1):#inner loop
                 if(idCode[index] > idCode[index + 1]):
@@ -94,7 +113,7 @@ def bubble2():
                     allegience[index + 1] = temp
 
 def bye():
-    print("If you think this has a happy ending, you havent been paying attention.") 
+    print("\nIf you think this has a happy ending, you havent been paying attention. -Ramsay Bolton\n\n") 
 
 #-----------MAIN PROGRAM-----------
 import os  #os.system('cls') 
@@ -121,25 +140,25 @@ with open("C:/Users/ghard/Desktop/SE126_202240/week8/GOT_bubble_sort_7.txt") as 
         allegience.append(rec[4].lower())
 
     print("\nrecords in file: ",records)
-    
 print("--------------------------------------------------------------------------------")
 print("{0:8} {1:14} {2:16} {3:17} {4:10} {5}".format("Index","ID Code", "Last Name", "First Name", "Age", "Allegience"))
 print("--------------------------------------------------------------------------------\n")
 
 for i in range(0,records):
-    print("{0:3}\t{1:15} {2:17} {3:17} {4:8} {5}".format(i, idCode[i].title(), lName[i].title(), fName[i].title(), age[i], allegience[i].title()))
+    print("{0:3}\t{1:15} {2:17} {3:17} {4:8} {5}".format(i + 1, idCode[i].title(), lName[i].title(), fName[i].title(), age[i], allegience[i].title()))
+        
 
 answer = "y"
 
 while answer == "y":
     choice = menu()
-    #os.system('cls')
+    os.system('cls') #clear before new search
     
     if choice == 1:
         bubble()
         search = input("\n\n\tEnter the FIRST NAME of the person/people you are looking for: ").lower()
 
-        min = 0                         #this is the lowerst starting INDEX
+        min = 0                         #this is the lowest starting INDEX
         max = records -1                #the highest starting INDEX
         guess = int((min + max) / 2) #or: guess = (min + max) // 2 -> starting MIDDLE index
         search_count = 0
@@ -160,7 +179,7 @@ while answer == "y":
             print("\n\t\tYour BINARY SEARCH results for ", search.title(), ": ")
             print("{0:8} {1:14} {2:16} {3:17} {4:10} {5}".format("Index","ID Code", "Last Name", "First Name", "Age", "Allegience"))
             print("--------------------------------------------------------------------------------\n")
-            print("{0}\t{1:20} {2:15} {3:17} {4:10} {5}".format(i,idCode[guess].title(), lName[guess].title(), fName[guess].title(), age[guess], allegience[guess].title()))
+            print("{0}\t{1:20} {2:15} {3:17} {4:10} {5}".format(i + 1,idCode[guess].title(), lName[guess].title(), fName[guess].title(), age[guess], allegience[guess].title()))
 
         else:
             print("\n\tYour BINARY SEARCH results for ", search.title(), ": could NOT BE FOUND. ")
@@ -172,7 +191,7 @@ while answer == "y":
         bubble2()
         search = input("\n\nEnter an ID Code: ").lower()
 
-        min = 0                         #this is the lowerst starting INDEX
+        min = 0                         #this is the lowest starting INDEX
         max = records -1                #the highest starting INDEX
         guess = int((min + max) / 2) #or: guess = (min + max) // 2 -> starting MIDDLE index
         search_count = 0
@@ -192,7 +211,7 @@ while answer == "y":
             print("\n\t\tYour BINARY SEARCH results for ", search.title(), ": ")
             print("{0:8} {1:14} {2:16} {3:17} {4:10} {5}".format("Index","ID Code", "Last Name", "First Name", "Age", "Allegience"))
             print("--------------------------------------------------------------------------------\n")
-            print("{0}\t{1:20} {2:15} {3:17} {4:10} {5}".format(i,idCode[guess].title(), lName[guess].title(), fName[guess].title(), age[guess], allegience[guess].title()))
+            print("{0}\t{1:20} {2:15} {3:17} {4:10} {5}".format(i + 1,idCode[guess].title(), lName[guess].title(), fName[guess].title(), age[guess], allegience[guess].title()))
 
         else:
             print("\n\tYour BINARY SEARCH results for ", search.title(), ": could NOT BE FOUND. ")
@@ -251,6 +270,5 @@ while answer == "y":
 
         print("\n\nSearch Loop Iterations Performed: {}".format(search_count))      
     answer = again()
-
 bye()
 
