@@ -1,0 +1,113 @@
+The College Dropout,Kanye West,2004,Explicit
+Late Registration,Kanye West,2005,Explicit
+Graduation,Kanye West,2007,Explicit
+808s & Heartbreak,Kanye West,2008,
+My Beautiful Dark Twisted Fantasy,Ye,2010,Explicit
+Yeezus,Kanye West,2013,Explicit
+The Life of Pablo,Kanye West,2016,Explicit
+Ye,Kanye West,2018,Explicit
+JESUS IS KING,Kanye West,2019,
+Donda,Kanye West,2021,
+KIDS SEE GHOSTS,Kanye West & Kid Cudi,2018,Explicit
+A Kid Named Cudi,Kid Cudi,2008,Explicit
+Man On the Moon,Kid Cudi,2009,Explicit
+Man On the Moon Vol. II,Kid Cudi,2010,Explicit
+Indicud,Kid Cudi,2013,Explicit
+SATELLITE FLIGHT,Kid Cudi,2014,Explicit
+Speedin' Bullet 2 Heaven,Kid Cudi,2015,Explicit
+Passion Pain & Demon Slayin',Kid Cudi,2016,Explicit
+Man On the Moon III,Kid Cudi,2020,Explicit
+Goblin,Tyler the Creator,2011,Explicit
+fWol,Tyler the Creator,2013,Explicit
+Cherry Bomb,Tyler the Creator,2015,Explicit
+Flower Boy,Tyler the Creator,2017,Explicit
+IGOR,Tyler the Creator,2019,Explicit
+CALL ME IF YOU GET LOST,Tyler the Creator,2021,Explicit
+Section.80,Kendrick Lamar,2011,Explicit
+good kid m.A.A.d city,Kendrick Lamar,2012,Explicit
+To Pimp a Butterfly,Kendrick Lamar,2015,Explicit
+DAMN.,Kendrick Lamar,2017,Explicit
+Mr. Morale & The Big Steppers,Kendrick Lamar,2022,Explicit
+Operation: Doomsday,MF DOOM,1999,Explicit
+MM..FOOD,MF DOOM,2004,Explicit
+The Mouse & the Mask,MF DOOM,2005,
+Bookhead,MF DOOM,2014,Explicit
+BORN LIKE THIS,MF DOOM,2019,Explicit
+Madvillainy,Madvillain,2004,Explicit
+Bizarre Ride II the Pharcyde,The Pharcyde,1992,Explicit
+ATLiens,Outkast,1996,Explicit
+Aquemini,Outkast,1998,Explicit
+Stankonia,Outkast,2000,Explicit
+Idlewild,Outkast,2006,Explicit
+The Block is Hot,Lil Wayne,1999,Explicit
+500 Degreez,Lil Wayne,2002,Explicit
+The Carter,Lil Wayne,2004,Explicit
+The Carter II,Lil Wayne,2005,Explicit
+Like Father Like Son,Lil Wayne,2006,Explicit
+The Carter III,Lil Wayne,2008,Explicit
+No Ceilings,Lil Wayne,2009,Explicit
+I Am Not a Human Being,Lil Wayne,2010,Explicit
+The Carter IV,Lil Wayne,2011,Explicit
+I Am Not a Human Being II,Lil Wayne,2013,Explicit
+Fwa,Lil Wayne,2015,Explicit
+The Carter V,Lil Wayne,2020,Explicit
+Sorry 4 The Wait,Lil Wayne,2022,Explicit
+The Massacre,50 Cent,2005,Explicit
+Baby By Me,50 Cent,2009,Explicit
+Animal Ambition,50 Cent,2014,Explicit
+Reasonable Doubt,JAY-Z,1996,Explicit
+In My Lifetime Vol.1,JAY-Z,1997,Explicit
+Vol.2...Hard Knock Life,JAY-Z,1998,Explicit
+Vol.3...Life and Times of S. Carter,JAY-Z,1999,Explicit
+The Dynasty,JAY-Z,2000,Explicit
+The Blueprint,JAY-Z,2001,Explicit
+The Best of Both Worlds,JAY-Z,2002,Explicit
+The Blueprint 2,JAY-Z,2002,Explicit
+The Black Album,JAY-Z,2003,Explicit
+Unfinished Business,JAY-Z,2004,Explicit
+Kingdom Come,JAY-Z,2006,Explicit
+American Gangster,JAY-Z,2007,Explicit
+The Blueprint 3,JAY-Z,2009,Explicit
+Magna Carta...Holy Grail,JAY-Z,2013,Explicit
+4:44,JAY-Z,2017,Explicit
+Supa Dupa Fly,Missy Elliott,1997,
+Da Real World,Missy Elliott,1999,Explicit
+Miss E...So Addictive,Missy Elliott,2001,
+Under Construction,Missy Elliott,2002,Explicit
+This Is Not a Test!,Missy Elliott,2003,Explicit
+The Cookbook,Missy Elliot,2005,Explicit
+LIVE.LOVE.A$AP,A$AP Rocky,2011,Explicit
+AT.LONG.LAST.A$AP,A$AP Rocky,2015,Explicit
+TESTING,A$AP Rocky,2018,Explicit
+Camp,Childish Gambino,2011,Explicit
+Because the Internet,Childish Gambino,2013,Explicit
+Kauai,Childish Gambino,2014,Explicit
+Awaken My Love!,Childish Gambino,2016,Explicit
+3.15.20,Childish Gambino,2020,Explicit
+Black Ben Carson,JPEGMAFIA,2016,Explicit
+Veteran,JPEGMAFIA,2018,Explicit
+All My Heroes Are Cornballs,JPEGMAFIA,2019,Explicit
+EP!,JPEGMAFIA,2020,Explicit
+EP2!,JPEGMAFIA,2021,Explicit
+LP!,JPEGMAFIA,2021,Explicit
+In My Mind,Pharrell Williams,2006,Explicit
+Doris,Earl Sweatshirt,2013,Explicit
+Some Rap Songs,Earl Sweatshirt,2018,Explicit
+SICK!,Earl Sweatshirt,2022,Explicit
+2001,Dr. Dre,1999,Explicit
+Compton,Dr. Dre,2015,Explicit
+No Label,Migos,2012,Explicit
+Juug Season,Migos,2013,Explicit
+No Label II,Migos,2014,Explicit
+The Green Album,Migos,2014,Explicit
+Yung Rich Nation,Migos,2015,Explicit
+YRN 2,Migos,2016,Explicit
+TRU COLORS,Migos,2016,Explicit
+Culture,Migos,2017,Explicit
+Culture II,Migos,2018,Explicit
+Culture III,Migos,2021,Explicit
+Luv Is Rage,Lil Uzi Vert,2015,Explicit
+Lil Uzi Vert Vs. The World,Lil Uzi Vert,2016,Explicit
+The Perfect LUV Tape,Lil Uzi Vert,2016,Explicit
+Luv Is Rage 2,Lil Uzi Vert,2017,Explicit
+RED & WHITE,Lil Uzi Vert,2022,Explicit
