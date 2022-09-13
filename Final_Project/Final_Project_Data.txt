@@ -2,7 +2,7 @@ The College Dropout,Kanye West,2004,Explicit
 Late Registration,Kanye West,2005,Explicit
 Graduation,Kanye West,2007,Explicit
 808s & Heartbreak,Kanye West,2008,
-My Beautiful Dark Twisted Fantasy,Ye,2010,Explicit
+My Beautiful Dark Twisted Fantasy,Kanye West,2010,Explicit
 Yeezus,Kanye West,2013,Explicit
 The Life of Pablo,Kanye West,2016,Explicit
 Ye,Kanye West,2018,Explicit
@@ -75,7 +75,7 @@ Da Real World,Missy Elliott,1999,Explicit
 Miss E...So Addictive,Missy Elliott,2001,
 Under Construction,Missy Elliott,2002,Explicit
 This Is Not a Test!,Missy Elliott,2003,Explicit
-The Cookbook,Missy Elliot,2005,Explicit
+The Cookbook,Missy Elliott,2005,Explicit
 LIVE.LOVE.A$AP,A$AP Rocky,2011,Explicit
 AT.LONG.LAST.A$AP,A$AP Rocky,2015,Explicit
 TESTING,A$AP Rocky,2018,Explicit

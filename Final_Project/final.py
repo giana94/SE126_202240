@@ -54,8 +54,10 @@ def again():
         answer = input("\n\n\tWould you like to search again? [y/n]: ").lower()
     return answer
 
+
 #----------MAIN PROGRAM----------
 import csv
+import random
 
 album = []
 artist = []
@@ -64,7 +66,7 @@ explicit = []
 
 records = 0
 
-with open("C:/Users/ghard/Desktop/SE126_202240/Final_Project/Final_Project_Data.txt") as csvfile:
+with open("C:/Users/008018155/Desktop/SE126_202240/Final_Project/Final_Project_Data.txt") as csvfile:
     file = csv.reader(csvfile)
 
     for rec in file:
@@ -112,11 +114,71 @@ while answer == "y":
             print("\n\t\tYour BINARY SEARCH results for ", search, ": ")
             print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
             print("---------------------------------------------------------------------------------------------------------")
-            print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(i + 1, album[guess], artist[guess], year[guess], explicit[guess]))
+            print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(i + 1, album[guess].title(), artist[guess].title(), year[guess], explicit[guess].title()))
 
         else:
             print("\n\tYour BINARY SEARCH results for ", search, ": could NOT BE FOUND. ")
             print("\tPlease check your spelling and try again!")
         print("\nBINARY SEACH LOOPS: {}".format(search_count))
+
+    if choice == 2:
+        search_count = 0
+        
+        search = input("\nEnter the Artist you are searching for: ")
+        found = []
+
+        for i in range(0, records):
+            search_count += 1
+
+            if search == artist[i]:
+                found.append(i)
+
+        print("\n\n\t\tSEQUENTIAL SEARCH COMPLETE.")
+        print("--------------------------------------------------------------------------------")
+        print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
+        print("---------------------------------------------------------------------------------------------------------")
+        
+        if len(found) > 0:
+            for i in range(0, len(found)):
+                print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(found[i], album[found[i]].title(), artist[found[i]].title(), year[found[i]], explicit[found[i]].title()))
+        else:
+            print("\n\t\tYour search for ", search.title(), " was NOT FOUND. Please check your spelling!")
+
+        print("\n\nSearch Loop Iterations Performed: {}".format(search_count))
+
+
+    if choice == 3:
+        
+        search_count = 0
+        
+        search = input("\nEnter an Album Year: ")
+        found = []
+
+        for i in range(0, records):
+            search_count += 1
+
+            if search == year[i]:
+                found.append(i)
+
+        print("\n\n\t\tSEQUENTIAL SEARCH COMPLETE.")
+        print("--------------------------------------------------------------------------------")
+        print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
+        print("---------------------------------------------------------------------------------------------------------")
+        
+        if len(found) > 0:
+            for i in range(0, len(found)):
+                print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(found[i + 1], album[found[i]].title(), artist[found[i]].title(), year[found[i]], explicit[found[i]].title()))
+        else:
+            print("\n\t\tYour search for ", search.title(), " was NOT FOUND. Please check your spelling!")
+
+        print("\n\nSearch Loop Iterations Performed: {}".format(search_count))
+
+
+    if choice == 4:
+        with open ("C:/Users/008018155/Desktop/SE126_202240/Final_Project/Final_Project_Data.txt") as csvfile:
+            file = csv.reader(csvfile)
+            print(random.choice([line[0] for line in file]))
+
+
     answer = again()
 print("okayyyy byeeeeee")
