@@ -219,7 +219,7 @@ while answer == "y":
                 if rand == album[i]:
                     print("\n\nHey, we recomend you listen to: ")
                     print("\n{0:35}\t{1:25}\t{2:15} {3}".format("Album", "Artist", "Year", "Explicit"))
-                    print("---------------------------------------------------------------------------------------------------------")
+                    print("--------------------------------------------------------------------------------------------------------")
                     print("{0:35}\t {1:30} {2:15} {3}".format(album[i], artist[i], year[i], explicit[i]))
         answer = again()
                     
