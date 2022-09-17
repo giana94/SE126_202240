@@ -232,12 +232,12 @@ while answer == "y":
             print("Sorry your search for", search, "could NOT be found")
 
     if choice == "4": #pick a random album # hey fix this 
-        with open ("/Users/erickcordon/Desktop/SE126_NewNew/PythonPals/Final_Project_Data.txt") as csvfile:
+        with open ("C:/Users/ghard/Desktop/SE126_202240/Final_Project/Final_Project_Data.txt") as csvfile:
             file = csv.reader(csvfile)
             print("Hey, we recomend you listen to:",random.choice([line[0] for line in file]))
 
     if choice =="5": #opens a spotify playlsit
-        webbrowser.open("https://open.spotify.com/playlist/6qCz3om0TmhNXcOL5Xdj17")
+        webbrowser.open("https://www.google.com/")
 
     if choice == "6":
 

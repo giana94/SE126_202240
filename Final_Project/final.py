@@ -15,17 +15,17 @@
 
 #-------------------VARIABLE DICTIONARY-------------------
 
-#
-#
-#
-#
-#
-#
-#
-#
-#
-
-
+#records                number of records in file
+#album                  list of the album titles
+#artist                 list of the artists names
+#year                   list of the years
+#explicit               list of whether or not an album is explicit
+#answer                 Y to stay in loop 
+#choice                 user input menu options
+#search                 user input within each choice
+#found                  sequential search found results
+#search_count           sequential search loops count
+#rand                   random function
 #-------------------FUNCTIONS-------------------
 
 def menu():
@@ -39,16 +39,14 @@ def menu():
     print("5.	Check out our playlist")
     print("6.	EXIT")
     
-    choice = int(input("\n\tPlease enter your selection [1 - 6]: "))
-    
-    
-    while choice != 1 and choice != 2 and choice != 3 and choice != 4 and choice != 5 and choice != 6:
+    choice = input("\n\tPlease make a selection from the follwing options [1 - 6]: ")
+
+    while choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
         
         print("\t\t\t\t**ERROR!** Invalid Entry")
-        choice = int(input("\n\tPlease enter your selection [1 - 6]: "))
+        choice = input("\n\tPlease enter your selection [1 - 6]: ")
 
     return choice
-
 
 def bubble(): #Album ascending order
         for i in range(0, records - 1):#outter loop
@@ -80,7 +78,8 @@ def again():
     return answer
 
 def bye():
-    print("Thank you for coming to the Python Pals music shop! ♫\n\n")
+    os.system('cls')
+    print("\n\n\t\t\tThank you for coming to the Python Pals music shop! ♫\n\n")
 
 #-------------------MAIN PROGRAM-------------------
 
@@ -125,10 +124,10 @@ answer = "y"
 while answer == "y":
     choice = menu()
     
-    if choice == 1:
+    if choice == "1":
         print("binary Search for Album")
         bubble()
-        search = input("\n\n\tEnter the ALBUM you are looking for: ").lower()
+        search = input("\n\n\tEnter the FULL title of the ALBUM you are looking for: ").lower()
 
         min = 0                         #this is the lowest starting INDEX
         max = records -1                #the highest starting INDEX
@@ -148,17 +147,18 @@ while answer == "y":
             
         if search == album[guess]:
 
-            print("\n\t\tYour BINARY SEARCH results for ", search, ": ")
+            print("\n\t\tYour BINARY SEARCH results for ", search.title(), ": ")
             print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
             print("---------------------------------------------------------------------------------------------------------")
             print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(i + 1, album[guess].title(), artist[guess].title(), year[guess], explicit[guess].title()))
 
         else:
-            print("\n\tYour BINARY SEARCH results for ", search, ": could NOT BE FOUND. ")
+            print("\n\tYour BINARY SEARCH results for ", search.title(), ": could NOT BE FOUND. ")
             print("\tPlease check your spelling and try again!")
         print("\nBINARY SEACH LOOPS: {}".format(search_count))
+        answer = again()
 
-    if choice == 2:
+    if choice == "2":
         search_count = 0
         
         search = input("\nEnter the Artist you are searching for: ").lower()
@@ -169,26 +169,24 @@ while answer == "y":
 
             if search == artist[i]:
                 found.append(i)
-
-        print("\n\n\t\tSEQUENTIAL SEARCH COMPLETE.")
-        print("--------------------------------------------------------------------------------")
         
+        print("\n\n\t\tHey, this is all the info we have for", search.title(),": \n")
+        print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
+        print("---------------------------------------------------------------------------------------------------------")
         if len(found) > 0:
             for i in range(0, len(found)):
-                print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
-                print("---------------------------------------------------------------------------------------------------------")
                 print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(found[i], album[found[i]].title(), artist[found[i]].title(), year[found[i]], explicit[found[i]].title()))
         else:
             print("\n\tYour search for ", search.title(), " was NOT FOUND. Please check your spelling!")
 
         print("\n\nSearch Loop Iterations Performed: {}".format(search_count))
+        answer = again()
 
-
-    if choice == 3:
+    if choice == "3":
         
         search_count = 0
         
-        search = input("\nEnter an Album Year: ")
+        search = input("\nPlease enter the Year you are searching for: ")
         found = []
 
         for i in range(0, records):
@@ -197,8 +195,7 @@ while answer == "y":
             if search == year[i]:
                 found.append(i)
 
-        print("\n\n\t\tSEQUENTIAL SEARCH COMPLETE.")
-        print("--------------------------------------------------------------------------------")
+        print("\n\n\t\t\tYour SEQUENTIAL SEARCH results for", search,":")
         print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
         print("---------------------------------------------------------------------------------------------------------")
         
@@ -209,23 +206,30 @@ while answer == "y":
             print("\n\t\tYour search for ", search.title(), " was NOT FOUND. Please check your spelling!")
 
         print("\n\nSearch Loop Iterations Performed: {}".format(search_count))
+        answer = again()
 
 
-    if choice == 4:
+    if choice == "4":
         with open ("C:/Users/ghard/Desktop/SE126_202240/Final_Project/Final_Project_Data.txt") as csvfile:
             
             file = csv.reader(csvfile)
-            rand = random.choice([line[0].lower() for line in file])
+            rand = random.choice([line[0].lower() for line in file]) #randoom function!!
             
             for i in range(0, records):
                 if rand == album[i]:
-                    print("\n\nRandom Album Selected: ")
+                    print("\n\nHey, we recomend you listen to: ")
                     print("\n{0:35}\t{1:25}\t{2:15} {3}".format("Album", "Artist", "Year", "Explicit"))
                     print("---------------------------------------------------------------------------------------------------------")
                     print("{0:35}\t {1:30} {2:15} {3}".format(album[i], artist[i], year[i], explicit[i]))
+        answer = again()
                     
-    if choice == 5: #opens a spotify playlsit
+    if choice == "5": #opens a spotify playlsit within the web browser
         webbrowser.open("https://open.spotify.com/playlist/6qCz3om0TmhNXcOL5Xdj17")
+        answer = again()
 
-    answer = again()
-bye()
+    if choice == "6":
+        print("\n\tYou have chosen to Exit!")
+        answer = "n"
+    
+if answer == "n":
+    bye()
