@@ -11,7 +11,7 @@
 # 4. Give Random Album
 # 5. Check out our playlist
 # 6. Exit
-#Depending on which option the user chooses, the program will use either binary search or sequential search. Then Ransom Album will give the user a random album from the list. Exit will just simply wxit the program. Also, before each new search teh screen will clear. 
+#Depending on which option the user chooses, the program will use either binary search or sequential search. Then Random Album will give the user a random album from the list. Exit will just simply exit the program. Also, before each new search the screen will clear. 
 
 #-------------------VARIABLE DICTIONARY-------------------
 
