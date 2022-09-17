@@ -18,7 +18,7 @@ Speedin' Bullet 2 Heaven,Kid Cudi,2015,Explicit
 Passion Pain & Demon Slayin',Kid Cudi,2016,Explicit
 Man On the Moon III,Kid Cudi,2020,Explicit
 Goblin,Tyler the Creator,2011,Explicit
-fWol,Tyler the Creator,2013,Explicit
+Wolf,Tyler the Creator,2013,Explicit
 Cherry Bomb,Tyler the Creator,2015,Explicit
 Flower Boy,Tyler the Creator,2017,Explicit
 IGOR,Tyler the Creator,2019,Explicit

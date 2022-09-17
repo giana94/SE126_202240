@@ -1,37 +1,15 @@
-#The Python Pals
-#SE126_202240
-#Final Project
-#9/21/22
-
-#-------------------PROGRAM PROMPT-------------------
+#----------PROGRAM PROMPT----------
 #Our program takes a list of Rap/Hip-Hop albums and lists them out starting from album name, artist name, year, and whether its explicit or not. Then the program will ask you to pick an option from the list of search methods:
 # 1. Search by Album
 # 2. Search by Artist
 # 3. Search by Year
 # 4. Give Random Album
-# 5. Check out our playlist
-# 6. Exit
+# . Exit
 #Depending on which option the user chooses, the program will use either binary search or sequential search. Then Ransom Album will give the user a random album from the list. Exit will just simply wxit the program. Also, before each new search teh screen will clear. 
 
-#-------------------VARIABLE DICTIONARY-------------------
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-
-
-#-------------------FUNCTIONS-------------------
-
+#----------VARIABLE DICTIONARY----------
 def menu():
-    print("\n\n\t\t♫ Welcome to the Python Pals Music Shop. Feel free to take a look at our Search Menu Below ♫")
-    
-    print("\n\tSEARCH MENU\n")
+    print("\n\n\tSEARCH MENU\n")
     print("1.	Search by ALBUM")
     print("2.	Search by ARTIST")
     print("3.	Search by YEAR")
@@ -50,12 +28,12 @@ def menu():
     return choice
 
 
-def bubble(): #Album ascending order
+def bubble(): #ID code ascending order
         for i in range(0, records - 1):#outter loop
             for index in range(0, records - 1):#inner loop
-                if(album[index] > album[index + 1]): 
+                if(album[index] > album[index + 1]):
                     
-                    temp = album[index]                 #Swap all other values
+                    temp = album[index]
                     album[index] = album[index +1]
                     album[index + 1] = temp
                     
@@ -80,10 +58,10 @@ def again():
     return answer
 
 def bye():
-    print("Thank you for coming to the Python Pals music shop! ♫\n\n")
+    print("Thank you for coming to the Python Pals music shop! ♫")
 
-#-------------------MAIN PROGRAM-------------------
 
+#----------MAIN PROGRAM----------
 import csv
 import random
 import os 
@@ -102,23 +80,23 @@ with open("C:/Users/ghard/Desktop/SE126_202240/Final_Project/Final_Project_Data.
     for rec in file:
 
         records += 1
-        album.append(rec[0].lower())
-        artist.append(rec[1].lower())
+        album.append(rec[0])
+        artist.append(rec[1])
         year.append(rec[2])
+        #explicit.append(rec[3])
         
-        #Adds " --- " to empty Indices if album is not Explicit
+        #Adds " --- " to empty Indeces if album is not Explicit
         if rec[3] == "Explicit":
             explicit.append(rec[3])
         else:
             explicit.append("--------")
-            
     
-    print("\nRecords in file: ",records)
+    print("\nRecords in file: {}".format(records))
     
 print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
 print("---------------------------------------------------------------------------------------------------------")
 for i in range(0,records):
-    print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(i + 1, album[i].title(), artist[i].title(), year[i], explicit[i]))
+    print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(i + 1, album[i], artist[i], year[i], explicit[i]))
     
 answer = "y"
 
@@ -128,7 +106,7 @@ while answer == "y":
     if choice == 1:
         print("binary Search for Album")
         bubble()
-        search = input("\n\n\tEnter the ALBUM you are looking for: ").lower()
+        search = input("\n\n\tEnter the ALBUM you are looking for: ")
 
         min = 0                         #this is the lowest starting INDEX
         max = records -1                #the highest starting INDEX
@@ -161,7 +139,7 @@ while answer == "y":
     if choice == 2:
         search_count = 0
         
-        search = input("\nEnter the Artist you are searching for: ").lower()
+        search = input("\nEnter the Artist you are searching for: ")
         found = []
 
         for i in range(0, records):
@@ -215,7 +193,7 @@ while answer == "y":
         with open ("C:/Users/ghard/Desktop/SE126_202240/Final_Project/Final_Project_Data.txt") as csvfile:
             
             file = csv.reader(csvfile)
-            rand = random.choice([line[0].lower() for line in file])
+            rand = random.choice([line[0] for line in file])
             
             for i in range(0, records):
                 if rand == album[i]:
