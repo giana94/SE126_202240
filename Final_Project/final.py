@@ -172,14 +172,14 @@ while answer == "y":
 
         print("\n\n\t\tSEQUENTIAL SEARCH COMPLETE.")
         print("--------------------------------------------------------------------------------")
-        print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
-        print("---------------------------------------------------------------------------------------------------------")
         
         if len(found) > 0:
             for i in range(0, len(found)):
+                print("\n{0:13}\t{1:24}\t{2:20}\t{3:15} {4}".format("Index", "Album", "Artist", "Year", "Explicit"))
+                print("---------------------------------------------------------------------------------------------------------")
                 print("{0:3}\t{1:35} {2:27} {3:15} {4:25}".format(found[i], album[found[i]].title(), artist[found[i]].title(), year[found[i]], explicit[found[i]].title()))
         else:
-            print("\n\t\tYour search for ", search.title(), " was NOT FOUND. Please check your spelling!")
+            print("\n\tYour search for ", search.title(), " was NOT FOUND. Please check your spelling!")
 
         print("\n\nSearch Loop Iterations Performed: {}".format(search_count))
 
